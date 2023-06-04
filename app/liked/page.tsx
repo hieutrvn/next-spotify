@@ -19,17 +19,10 @@ const Liked = async () => {
           overflow-y-auto
         "
         >
-            <Header>
+            <Header className=" from-violet-700">
                 <div className="mt-20">
                     <div
-                        className="
-                flex 
-                flex-col 
-                md:flex-row 
-                items-center 
-                gap-x-5
-              "
-                    >
+                        className="flex flex-col md:flex-row items-center gap-x-5">
                         <div className="relative h-32 w-32 lg:h-44 lg:w-44">
                             <Image
                                 className="object-cover"
@@ -43,14 +36,7 @@ const Liked = async () => {
                                 Playlist
                             </p>
                             <h1
-                                className="
-                    text-white 
-                    text-4xl 
-                    sm:text-5xl 
-                    lg:text-7xl 
-                    font-bold
-                  "
-                            >
+                                className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold">
                                 Liked Songs
                             </h1>
                         </div>
