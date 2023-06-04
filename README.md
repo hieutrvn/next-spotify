@@ -21,6 +21,10 @@ Key Features:
 - Favorites system
 - Playlists / Liked songs system
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bf829db5227832dd7bfb4ccb6491e7eaa395d750
 ### Cloning the repository
 
 ```shell
