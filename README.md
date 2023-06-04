@@ -21,9 +21,6 @@ Key Features:
 - Favorites system
 - Playlists / Liked songs system
 
-### Prerequisites
-
-**Node version 14.x**
 
 ### Cloning the repository
 
@@ -54,11 +51,3 @@ Use `database.sql` file, create songs and liked_songs table (there is a video tu
 ```shell
 npm run dev
 ```
-
-## Available commands
-
-Running commands with npm `npm run [command]`
-
-| command | description                              |
-| :------ | :--------------------------------------- |
-| `dev`   | Starts a development instance of the app |
