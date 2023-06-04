@@ -22,7 +22,7 @@ const AccountContent = () => {
     return (
         <div className="mb-7 px-6">
             <div className="flex flex-col gap-y-4">
-                <p>Profile.</p>
+                <p className=' text-white text-2xl font-semibold'>Profile</p>
                 <Button className="w-[300px]">
                     <Link
                         href="https://www.instagram.com/hieutranhamchoi/"
