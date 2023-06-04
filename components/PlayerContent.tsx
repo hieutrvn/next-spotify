@@ -5,7 +5,7 @@ import MediaItem from "./MediaItem";
 import LikedButton from "./LikedButton";
 import { BsPauseFill, BsPlayFill } from "react-icons/bs"
 import { AiFillStepBackward, AiFillStepForward } from "react-icons/ai";
-import { HiSpeakerXMark, HiSpeakerWave } from "react-icons/hi2"
+import { HiVolumeOff, HiVolumeUp } from "react-icons/hi"
 import Slider from "./Slider";
 import usePlayer from "@/hooks/usePlayer";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
     const [isPlaying, setIsPlaying] = useState(false)
 
     const Icon = isPlaying ? BsPauseFill : BsPlayFill
-    const VolumeIcon = volume === 0 ? HiSpeakerXMark : HiSpeakerWave
+    const VolumeIcon = volume === 0 ? HiVolumeOff : HiVolumeUp
 
     const onPlayNext = () => {
         if (player.ids.length === 0) {
