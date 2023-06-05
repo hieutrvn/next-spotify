@@ -1,5 +1,7 @@
+import { getHours } from "date-fns"
+
 const Greeting = () => {
-    const currentHour = new Date().getHours();
+    const currentHour = getHours(new Date());
 
     let greeting;
     if (currentHour < 12) {
