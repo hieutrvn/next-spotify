@@ -1,9 +1,9 @@
-import { getHours } from "date-fns"
+import { format, getHours } from 'date-fns';
 
-const Greeting = () => {
+const Greeting: React.FC = () => {
     const currentHour = getHours(new Date());
 
-    let greeting;
+    let greeting: string;
     if (currentHour < 12) {
         greeting = 'Good morning';
     } else if (currentHour < 18) {
