@@ -1,29 +1,32 @@
 "use client";
 
 import * as RadixSlider from "@radix-ui/react-slider"
+import { ReactElement } from "react";
 
-interface SliderProps {
+interface SongSliderProps {
     value?: number
+    max?: number
     onChange?: (value: number) => void
 }
 
-const Slider: React.FC<SliderProps> = ({
+const SongSlider: React.FC<SongSliderProps> = ({
     value = 1,
+    max,
     onChange
 }) => {
-    const handleChange = (newValue: number[]) => {
-        onChange?.(newValue[0])
+    const handleChange = (newValue: any) => {
+        onChange?.(newValue)
     }
 
     return (
         <RadixSlider.Root
             className=" relative flex items-center  select-none touch-none w-full"
-            defaultValue={[1]}
+            defaultValue={[0]}
             value={[value]}
             onValueChange={handleChange}
-            max={1}
+            max={max}
             step={0.1}
-            aria-label="Volume"
+            aria-label="Song"
         >
             <RadixSlider.Track
                 className=" bg-neutral-600 relative grow rounded-full h-[3px]"
@@ -36,4 +39,4 @@ const Slider: React.FC<SliderProps> = ({
     );
 }
 
-export default Slider;
+export default SongSlider;
