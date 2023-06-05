@@ -1,24 +1,28 @@
-import { format, getHours } from 'date-fns';
+"use client";
+
+import { useEffect, useState } from 'react';
 
 const Greeting: React.FC = () => {
-    const currentHour = getHours(new Date());
+    const [greeting, setGreeting] = useState<string>('');
 
-    let greeting: string;
-    if (currentHour < 12) {
-        greeting = 'Good morning';
-    } else if (currentHour < 18) {
-        greeting = 'Good afternoon';
-    } else if (currentHour < 21) {
-        greeting = 'Good evening';
-    } else {
-        greeting = 'Good night';
-    }
+    useEffect(() => {
+        const currentHour = new Date().getHours();
+        let greetingText: string;
 
-    return (
-        <div>
-            {greeting}
-        </div>
-    );
+        if (currentHour < 12) {
+            greetingText = 'Good morning';
+        } else if (currentHour < 18) {
+            greetingText = 'Good afternoon';
+        } else if (currentHour < 21) {
+            greetingText = 'Good evening';
+        } else {
+            greetingText = 'Good night';
+        }
+
+        setGreeting(greetingText);
+    }, []);
+
+    return <div>{greeting}</div>;
 }
 
 export default Greeting;
